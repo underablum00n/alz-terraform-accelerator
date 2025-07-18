@@ -38,6 +38,15 @@ variable "subscription_id_management" {
   }
 }
 
+variable "subscription_id_security" {
+  type        = string
+  description = "value of the subscription id for the Security subscription"
+  validation {
+    condition     = can(regex("^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$", var.subscription_id_security))
+    error_message = "You must provide a valid GUID for the Security subscription ID."
+  }
+}
+
 variable "root_parent_management_group_id" {
   type        = string
   default     = ""

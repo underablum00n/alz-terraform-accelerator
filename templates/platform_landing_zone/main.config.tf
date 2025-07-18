@@ -7,6 +7,7 @@ module "config" {
   subscription_id_connectivity    = var.subscription_id_connectivity
   subscription_id_identity        = var.subscription_id_identity
   subscription_id_management      = var.subscription_id_management
+  subscription_id_security        = var.subscription_id_security
   root_parent_management_group_id = var.root_parent_management_group_id
 
   custom_replacements = var.custom_replacements
